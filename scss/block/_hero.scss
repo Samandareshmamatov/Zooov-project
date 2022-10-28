@@ -1,0 +1,112 @@
+.hero {
+    background-repeat: no-repeat;
+    background-image: url('../../img/hero-before-bg.svg'), url('../../img/hero-bg.jpg');
+    background-size: 147px auto, cover;
+    background-position: right bottom 92px, center;
+}
+
+.hero__container {
+    padding-top: 225px;
+    padding-bottom: 225px;
+}
+
+.hero__title {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    max-width: 490px;
+    margin-bottom: 10px;
+}
+
+.hero__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 28px */
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    max-width: 367px;
+    z-index: 2;
+}
+
+.hero__link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    background: #961914;
+    border-radius: 8px;
+    padding: 13px 42px;
+}
+
+.hero__span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.hero__span::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -16px;
+    display: inline-block;
+    transform: rotate(2deg);
+    width: 260px;
+    height: 92px;
+    background-repeat: no-repeat;
+    background-image: url('../../img/text-span-img.svg');
+    background-position: left top;
+    background-size: contain;
+    z-index: -1;
+}
+
+@media only screen and (max-width:661px) {
+    .hero {
+        background-repeat: no-repeat;
+        background-size: 100px auto, cover;
+        background-position: right bottom, center;
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .hero__container {
+        padding-top: 207px;
+        padding-bottom: 173px;
+    }
+    .hero__break {
+        display: none;
+    }
+    .hero__title {
+        font-size: 44px;
+        line-height: 130%;
+        max-width: 400px;
+        margin-bottom: 24px;
+    }
+    .hero__text {
+        max-width: 227px;
+        margin-bottom: 48px;
+    }
+    .hero__span::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 182px;
+        height: 64px;
+    }
+}
+
+@media only screen and (max-width:430px) {
+    .hero__container {
+        text-align: center;
+    }
+    .hero__title {
+        max-width: 100%;
+    }
+    .hero__text {
+        max-width: 100%;
+    }
+}

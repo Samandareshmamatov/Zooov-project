@@ -1,0 +1,135 @@
+.question {
+    padding-top: 180px;
+}
+
+.question__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question__title {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.question__list {
+    width: 676px;
+    margin-left: 35px;
+}
+
+.question__item {
+    padding: 32px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.question__item:nth-child(1) {
+    padding-top: 0;
+}
+
+.question__item input {
+    display: none;
+}
+
+.question__label {
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../../img/question-plus.svg');
+    background-position: right top;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+
+.question__label-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+    max-width: 576px;
+}
+
+.question__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #434242;
+    padding-top: 12px;
+    display: none;
+}
+
+.question__item input:checked~.question__text {
+    display: block;
+}
+
+.question__item input:checked~.question__label {
+    background-image: url('../../img/question-minus.svg');
+    background-position: right top 8px;
+}
+
+@media only screen and (max-width:1170px) {
+    .question {
+        padding-top: 130px;
+    }
+    .question__list {
+        width: 500px;
+    }
+    .question__label-title {
+        max-width: 450px;
+    }
+}
+
+@media only screen and (max-width:980px) {
+    .question {
+        padding-top: 80px;
+    }
+    .question__title {
+        font-size: 40px;
+    }
+    .question__item {
+        padding: 24px 0;
+    }
+    .question__container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .question__list {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .question__list {
+        width: 400px;
+    }
+    .question__label-title {
+        max-width: 350px;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .question__container {
+        align-items: flex-start;
+    }
+    .question__title {
+        font-size: 28px;
+    }
+    .question__list {
+        width: 300px;
+    }
+    .question__label-title {
+        max-width: 250px;
+    }
+}
+
+@media only screen and (max-width:340px) {
+    .question__list {
+        width: 250px;
+    }
+    .question__label-title {
+        max-width: 215px;
+    }
+}

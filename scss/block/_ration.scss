@@ -1,0 +1,192 @@
+.ration {
+    padding-top: 200px;
+}
+
+.ration__content {
+    @include flex;
+    justify-content: space-between;
+}
+
+.ration__title {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    flex-shrink: 0;
+    margin-bottom: 80px;
+}
+
+.ration__span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.ration__span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    transform: rotate(2deg);
+    top: -12px;
+    left: -12px;
+    width: 201px;
+    height: 84px;
+    background-repeat: no-repeat;
+    background-image: url('../../img/ration-title-before.svg');
+    background-position: left top;
+    background-size: contain;
+    z-index: -1;
+}
+
+.ration__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    max-width: 677px;
+    margin-left: 40px;
+    margin-bottom: 74px;
+}
+
+.ration__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 26px;
+    margin-bottom: 80px;
+}
+
+.ration__card-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    padding-top: 45px;
+    padding-bottom: 4px;
+}
+
+.ration__type {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #9F9E9D;
+    margin-bottom: 16px;
+}
+
+.ration__card-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #434242;
+    margin-bottom: 11px;
+}
+
+.ration__amount {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #9F9E9D;
+    margin-bottom: 24px;
+}
+
+.ration__btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #961914;
+    border-radius: 8px;
+    border: 2px solid #961914;
+    padding: 13px 42px;
+    display: inline-block;
+}
+
+.ration__order {
+    background: #EAD1D0;
+    padding: 52px 121px 54px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-image: url('../../img/ration-line-img.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.ration__order-text {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    max-width: 705px;
+}
+
+.ration__order-btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    padding: 13px 42px;
+    background-color: #961914;
+    border-radius: 8px;
+    margin-left: 40px;
+}
+
+@media only screen and (max-width:930px) {
+    .ration {
+        padding-top: 140px;
+    }
+    .ration__text {
+        display: none;
+    }
+    .ration__order {
+        background: #EAD1D0;
+        padding: 32px 48px;
+    }
+}
+
+@media only screen and (max-width:770px) {
+    .ration__title {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    .ration__span::before {
+        content: "";
+        width: 170px;
+        height: 70px;
+    }
+    .ration__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 18px;
+        row-gap: 24px;
+        margin-bottom: 64px;
+    }
+    .ration__order {
+        flex-direction: column;
+        text-align: center;
+    }
+    .ration__order-text {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    .ration__order-btn {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .ration {
+        padding-top: 100px;
+    }
+    .ration__title {
+        flex-shrink: 1;
+    }
+    .ration__item:not(:nth-child(1)) {
+        display: none;
+    }
+    .ration__list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
