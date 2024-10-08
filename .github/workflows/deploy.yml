@@ -1,0 +1,24 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # Change this to your branch name if different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Copy files to server
+      uses: appleboy/scp-action@v0.1.3
+      with:
+        host: ${{ secrets.SERVER_IP }}  # Your server's IP address
+        username: ${{ secrets.SSH_USERNAME }}  # Your SSH username
+        key: ${{ secrets.SSH_PRIVATE_KEY }}  # Your private SSH key
+        port: 22
+        source: "my-web-app/*"  # Source directory
+        target: "/var/www/my-web-app/"  # Target directory on the server
